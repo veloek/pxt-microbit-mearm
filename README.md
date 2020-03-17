@@ -1,5 +1,7 @@
-Blocks for MeArm micro:bit connector
-====================================
+Blocks for MeArm micro:bit 
+============================
+
+MeArm micro:bit can be purchased at kitronik.co.uk
 
 Blocks that support the micro:bit connector board for the MeArm. The board has two two-axis joysticks on-board which are hooked up to pins P0 - P3. The click presses of the joysticks are hooked up to buttons A and B on the micro:bit. The USB connector on board will give the MeArm 5V to run the servos and feeds 3.3V into the micro:bit so that only one power supply is required. It is possible to connect both the micro:bit USB connection to program it and the main power supply at the same time as there is protection.
 
