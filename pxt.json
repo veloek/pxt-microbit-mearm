@@ -1,6 +1,6 @@
 {
     "name": "mearm-microbit",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "A robot arm controlled by the micro:bit",
     "license": "MIT",
     "dependencies": {
