@@ -25,7 +25,7 @@ enum Joystick {
  */
 //% weight=80 color=#00A3E0
 namespace mearm {
-  
+
   let servos = [
     {minPulse: 600,  maxPulse: 2400, minAngle: 0,   maxAngle: 179,  currentAngle: 999, pin: AnalogPin.P13, joystick: AnalogPin.P0, direction: 1},
     {minPulse: 1050, maxPulse: 2400, minAngle: 0,   maxAngle: 135,  currentAngle: 999, pin: AnalogPin.P15, joystick: AnalogPin.P1, direction: 1},
@@ -35,7 +35,7 @@ namespace mearm {
 
   // Disable the LEDs
   led.enable(false);
-  
+
   /**
    * Implementation of moving a servo to a specific angle
    */
@@ -55,7 +55,21 @@ namespace mearm {
   }
 
   /**
+   * Get current angle of servo
+   */
+  export function currentAngle(servo: MearmServo){
+    let _servo = servos[servo];
+
+    return _servo.currentAngle;
+  }
+
+  /**
    * Move a servo to an absolute angle
+   *
+   * MearmServo.Base: 0-179
+   * MearmServo.Right: 0-135
+   * MearmServo.Left: 30-160
+   * MearmServo.Grip: 0-89
    */
   //% weight=90
   //% blockId=move_to block="move|%servo=MearmServo|to|%angle|degrees"
@@ -80,7 +94,7 @@ namespace mearm {
   export function moveToCentre(servo: MearmServo){
     setServoAngle(servo, 89);
   }
-  
+
   /**
    * Open the grip
    */
